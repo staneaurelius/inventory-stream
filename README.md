@@ -1,6 +1,6 @@
 # Building a Streaming Pipeline on Google Cloud Platform
 
-This repository contains the data and scripts used in [Supertype article](https://supertype.ai/notes/streaming-pipeline-for-warehouse-inventory-management-system) of the same name, with the main contents being:
+This repository contains the data and scripts used in the [Supertype article](https://supertype.ai/notes/streaming-pipeline-for-warehouse-inventory-management-system) with the same name, with the main contents being:
 
 - Creating a sensor simulation
 - Integrating the simulated sensor into Google Cloud Pub/Sub
@@ -48,7 +48,7 @@ python3 simulate_sensor.py \
 
 > the speed multiplier is used to determine how many minutes of data will be sent into Pub/Sub in 1 minute realtime
 
-Use `dataflow_pubsub_to_bq.py` to deploy a streaming pipeline into Dataflow. The pipeline will continously ingest any message from your Pub/Sub subscription into your BigQuery table.
+Use `dataflow_pubsub_to_bq.py` to deploy a streaming pipeline into Dataflow. The pipeline will continously ingest any message from a designated Pub/Sub subscription into the BigQuery table.
 
 ```{bash}
 python -m dataflow_pubsub_to_bq \
